@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +17,6 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    white-space: nowrap;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -42,7 +45,7 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 .navbar__menu{
@@ -52,8 +55,7 @@
 }
 
 .navbar__item{
-    height: 50px;
-    width:150px;
+    height: 80px;
 }
 
 .navbar__links{
@@ -61,47 +63,73 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: 125px;
     text-decoration: none;
-    padding: 0px;
     height: 100%;
-}
-
-.navbar__links:hover{
-    color: green;
-}
-
-.navbar__btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width:100%;
-}
-
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    height: 100%;
-    width: 100px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: transparent;
-    color: white;
     transition: all 0.3s ease;
 }
 
-.container{
-    position:absolute;
+.navbar__links:hover{
+    color: #e20a02;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px){
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300;
+        padding: 0;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 0;
+        position: absolute;
+        top: -1000px;
+    }
+}
+
+.navbar__toggle .bar{
+    display: block;
+    cursor: pointer;
+}
+
+.messagebox1__container{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 40%;
+    transform: translate(200px, 400px);
+    text-align: center;
+    padding:100px;
+}
+
+.messagebox1__container h1{
+    font: 100px;
+    color: red;
+}
+.messagebox1__container p{
+    font:50px;
+    color: rgb(173, 10, 10);
+}
+
+.home__background{
+    position:relative;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
-    animation: animate 35s ease-in-out infinite;
+    min-height: 100vh;
+    animation: animate 32s ease-in infinite;
     background-size: cover;
 }
 
@@ -118,4 +146,47 @@
     75%{
         background-image: url(Pictures/4.jpg);
     }
+}
+
+/*------------------------------------------------------------*/
+/* Home Sub-Pages */
+#Home1{
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    background:white;
+    display: flex;
+    width:100%;
+}
+#Home2{
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    background:white;
+    display: flex;
+    width:100%;
+}
+#Home3{
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    background:white;
+    display: flex;
+    width:100%;
+}
+#Home4{
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    background:white;
+    display: flex;
+    width:100%;
+}
+#Home5{
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    background:white;
+    display: flex;
+    width:100%;
 }
